@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Admin_LIst" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b8a0a257-526e-4439-9e68-6001f5575ca7">
+	<property name="ireport.zoom" value="1.0000000000000016"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     admin_signup.`userId` AS admin_signup_userId,
+     admin_signup.`username` AS admin_signup_username,
+     admin_signup.`email` AS admin_signup_email,
+     admin_signup.`Password` AS admin_signup_Password,
+     admin_signup.`Confirm_Password` AS admin_signup_Confirm_Password
+FROM
+     `admin_signup` admin_signup]]>
+	</queryString>
+	<field name="admin_signup_userId" class="java.lang.Integer"/>
+	<field name="admin_signup_username" class="java.lang.String"/>
+	<field name="admin_signup_email" class="java.lang.String"/>
+	<field name="admin_signup_Password" class="java.lang.String"/>
+	<field name="admin_signup_Confirm_Password" class="java.lang.String"/>
+	<group name="admin_signup_userId">
+		<groupExpression><![CDATA[$F{admin_signup_userId}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="346" y="17" width="100" height="20" uuid="b60a9c91-0c54-4337-bbd1-fa76467fb240"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADMIN LIST]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="99" y="0" width="79" height="20" uuid="02af6cec-e726-4d85-82f0-47352ea70912"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr.No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="542" y="0" width="160" height="20" uuid="6548b3a0-3bcf-4fbe-9eff-11366ae9d3cd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="160" height="20" uuid="a9ebf7f2-7533-4efa-b00b-756e34e9cc9b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[UserName]]></text>
+			</staticText>
+			<line>
+				<reportElement x="79" y="35" width="623" height="1" uuid="dc2021fb-d8a1-4d21-ac93-fb386e45647a"/>
+			</line>
+			<staticText>
+				<reportElement x="396" y="0" width="160" height="20" uuid="3dc2eb65-551b-4e12-85c7-afb019e303f3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Password]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="55" splitType="Stretch">
+			<textField>
+				<reportElement x="99" y="0" width="79" height="20" uuid="a2ea7d37-48fa-4174-8bae-bb75d4207e5d"/>
+				<textFieldExpression><![CDATA[$F{admin_signup_userId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="0" width="160" height="20" uuid="29be6538-f100-4a0e-bf7f-e72dca254f74"/>
+				<textFieldExpression><![CDATA[$F{admin_signup_Confirm_Password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="542" y="0" width="160" height="20" uuid="6bc1163b-45d1-4086-83c4-9cdcbd76709f"/>
+				<textFieldExpression><![CDATA[$F{admin_signup_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="160" height="20" uuid="0ce735f7-ae1d-47b3-96bb-885705eee7e7"/>
+				<textFieldExpression><![CDATA[$F{admin_signup_username}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

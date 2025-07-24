@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Add_Candidate" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ef3ec749-f3ef-4ac1-83b5-841e2bc1f29f">
+	<property name="ireport.zoom" value="1.0000000000000018"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     admin_add_candidate.`candidate_id` AS admin_add_candidate_candidate_id,
+     admin_add_candidate.`Select_election` AS admin_add_candidate_Select_election,
+     admin_add_candidate.`candidateName` AS admin_add_candidate_candidateName,
+     admin_add_candidate.`PartyName` AS admin_add_candidate_PartyName,
+     admin_add_candidate.`VoterId` AS admin_add_candidate_VoterId,
+     admin_add_candidate.`candidateId` AS admin_add_candidate_candidateId,
+     admin_add_candidate.`AdharNumber` AS admin_add_candidate_AdharNumber,
+     admin_add_candidate.`email` AS admin_add_candidate_email,
+     admin_add_candidate.`ContactNumber` AS admin_add_candidate_ContactNumber,
+     admin_add_candidate.`Qualification` AS admin_add_candidate_Qualification,
+     admin_add_candidate.`candidate_position` AS admin_add_candidate_candidate_position,
+     admin_add_candidate.`candidateDOB` AS admin_add_candidate_candidateDOB,
+     admin_add_candidate.`Address` AS admin_add_candidate_Address,
+     admin_add_candidate.`candidatephoto` AS admin_add_candidate_candidatephoto,
+     admin_add_candidate.`candidateadharcard` AS admin_add_candidate_candidateadharcard,
+     admin_add_candidate.`candidatevoterid` AS admin_add_candidate_candidatevoterid,
+     admin_add_candidate.`partylogo` AS admin_add_candidate_partylogo,
+     admin_add_candidate.`votes` AS admin_add_candidate_votes
+FROM
+     `admin_add_candidate` admin_add_candidate]]>
+	</queryString>
+	<field name="admin_add_candidate_candidate_id" class="java.lang.Integer"/>
+	<field name="admin_add_candidate_Select_election" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidateName" class="java.lang.String"/>
+	<field name="admin_add_candidate_PartyName" class="java.lang.String"/>
+	<field name="admin_add_candidate_VoterId" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidateId" class="java.lang.String"/>
+	<field name="admin_add_candidate_AdharNumber" class="java.lang.String"/>
+	<field name="admin_add_candidate_email" class="java.lang.String"/>
+	<field name="admin_add_candidate_ContactNumber" class="java.lang.String"/>
+	<field name="admin_add_candidate_Qualification" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidate_position" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidateDOB" class="java.lang.String"/>
+	<field name="admin_add_candidate_Address" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidatephoto" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidateadharcard" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidatevoterid" class="java.lang.String"/>
+	<field name="admin_add_candidate_partylogo" class="java.lang.String"/>
+	<field name="admin_add_candidate_votes" class="java.lang.Integer"/>
+	<group name="admin_add_candidate_candidate_id">
+		<groupExpression><![CDATA[$F{admin_add_candidate_candidate_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="340" y="22" width="132" height="27" uuid="18121c05-90df-41e3-a1f2-4756d654db3d"/>
+				<textElement>
+					<font size="14" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[ALL CANDIDATES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="33" height="20" uuid="f333508e-8963-4202-a9ba-26937d307674"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr.No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="0" width="51" height="20" uuid="2714e18c-56bd-4cef-acf4-c0d931b2e7f8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="0" width="37" height="20" uuid="4b93aff8-15af-4a9e-b668-e8ca7b3e1e77"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="0" width="61" height="20" uuid="dcab25f5-e90f-4d7f-9211-6e7bdb38c205"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adhar No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="0" width="40" height="20" uuid="6f7d10e2-c258-475f-845b-9bac22cd26e5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Voter Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="0" width="43" height="20" uuid="6ffc1e63-97c2-4a1d-afc3-357d79a0f002"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Election Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="516" y="0" width="56" height="20" uuid="aaaf0bca-d870-447f-966e-fd3112a44cf9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PartyName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="604" y="0" width="44" height="20" uuid="dab9e896-e136-4cb9-8d50-742a0cfe8683"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[position]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="661" y="0" width="43" height="20" uuid="8e17940a-dc0d-46b4-8519-9927570de1bf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="771" y="0" width="31" height="20" uuid="56b4e35a-ebde-4121-846c-24cc6ba75d7c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[votes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="717" y="0" width="54" height="20" uuid="0a290eb8-5627-4df7-b95a-94e4124fd286"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[candidateId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="0" width="35" height="20" uuid="5689794c-6a0f-4f11-b4d3-919ec38bb9ac"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="31" width="802" height="1" uuid="77ccf36c-4293-48f0-bbf7-5f78d0be444c"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="19" height="20" uuid="70b61577-fd94-4acd-846a-76ee519cfbe2"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidate_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="0" width="83" height="35" uuid="8e607a86-4f74-42cf-8497-c0722312f160"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="0" width="79" height="20" uuid="195a9477-c656-4535-a0ac-30d18d527350"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_AdharNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="0" width="58" height="20" uuid="eae1a477-b4c0-444c-b202-b2aa8b1f2a44"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_VoterId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="0" width="80" height="35" uuid="33449fc4-aa02-4784-abf8-2b0d805d2898"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_Select_election}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="516" y="0" width="83" height="35" uuid="04e96cca-7c46-42e3-b32d-563c5d2efc64"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_PartyName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="61" height="35" uuid="2828faab-2a08-4362-94b1-b99522697f5b"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidate_position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="661" y="0" width="57" height="20" uuid="f8e94e16-237f-43d9-b42b-7c22d04ba97f"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_ContactNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="771" y="0" width="31" height="20" uuid="8e774542-b10b-4482-b20c-abe41e2bfbdf"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_votes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="717" y="0" width="54" height="20" uuid="bb3da6db-ba03-4b91-89d2-72d8dba1b41f"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidateId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="0" width="86" height="20" uuid="bac517e2-5a66-44f3-af86-4684f4f813c7"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidateName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="0" width="65" height="20" uuid="6eb03b51-bfc8-47f5-80ba-ea78588d1e78"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidateDOB}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="11" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

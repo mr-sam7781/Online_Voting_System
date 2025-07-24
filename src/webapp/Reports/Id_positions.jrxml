@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Id_positions" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0b38ed86-7c5b-4ba3-8f9b-d7b1b0bb4da9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     add_position.`id` AS add_position_id,
+     add_position.`election_name` AS add_position_election_name,
+     add_position.`position` AS add_position_position
+FROM
+     `add_position` add_position
+WHERE id = $P{id}]]>
+	</queryString>
+	<field name="add_position_id" class="java.lang.Integer"/>
+	<field name="add_position_election_name" class="java.lang.String"/>
+	<field name="add_position_position" class="java.lang.String"/>
+	<group name="add_position_id">
+		<groupExpression><![CDATA[$F{add_position_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="261" y="24" width="242" height="38" uuid="36ae37b1-d680-4447-9be0-65d782a56bdd"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALL POSITIONS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch">
+			<line>
+				<reportElement x="16" y="22" width="760" height="1" uuid="dacf0e95-6309-4f8a-b4a9-442bea4d572f"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="119" y="0" width="102" height="20" uuid="eb0c550d-759c-4f94-9d88-4d5cc494b3ec"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Position ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="0" width="182" height="20" uuid="4a55b8bc-a081-4876-be1d-6965e4f03d65"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Election_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="553" y="0" width="171" height="20" uuid="88d20540-ac27-4f4d-b944-079e83769ffe"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Position]]></text>
+			</staticText>
+			<line>
+				<reportElement x="16" y="38" width="760" height="1" uuid="cfb17da8-7dcb-4289-9d38-7f0408fc6d19"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="119" y="0" width="132" height="20" uuid="41aa3260-a68a-470c-aea8-2d6de0c00b7c"/>
+				<textFieldExpression><![CDATA[$F{add_position_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="553" y="0" width="192" height="20" uuid="9de2c63a-c65a-455b-8bed-43a8faf6cb89"/>
+				<textFieldExpression><![CDATA[$F{add_position_position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="321" y="0" width="194" height="20" uuid="77bae346-73e8-45d9-b3a1-74c3aaf050e7"/>
+				<textFieldExpression><![CDATA[$F{add_position_election_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

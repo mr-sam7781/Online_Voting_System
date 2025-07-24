@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Contact_Us" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4de36a55-8122-4927-a853-aaab5126c791">
+	<property name="ireport.zoom" value="0.7513148009015779"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     contact_us.`ContactUs_id` AS contact_us_ContactUs_id,
+     contact_us.`Name` AS contact_us_Name,
+     contact_us.`Email` AS contact_us_Email,
+     contact_us.`Message` AS contact_us_Message,
+     contact_us.`phone` AS contact_us_phone
+FROM
+     `contact_us` contact_us]]>
+	</queryString>
+	<field name="contact_us_ContactUs_id" class="java.lang.Integer"/>
+	<field name="contact_us_Name" class="java.lang.String"/>
+	<field name="contact_us_Email" class="java.lang.String"/>
+	<field name="contact_us_Message" class="java.lang.String"/>
+	<field name="contact_us_phone" class="java.lang.String"/>
+	<group name="contact_us_ContactUs_id">
+		<groupExpression><![CDATA[$F{contact_us_ContactUs_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="301" y="27" width="100" height="20" uuid="0033a130-fd23-45ca-8024-645219b0ea56"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTACTUS LIST]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="53" height="20" uuid="59cce59d-9605-4c9b-b113-ebc84cba80bd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr.No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="0" width="94" height="20" uuid="f3111f73-bbb0-4c64-9b27-beb85919c71d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="0" width="113" height="20" uuid="5dcfa919-be43-494f-81db-33719feb1aff"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="0" width="160" height="20" uuid="b7df43da-8d79-455c-b803-42cba82ad2d4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Message]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="0" width="160" height="20" uuid="e2665f31-0992-4d8e-a4ac-2e38a4cda584"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="36" width="654" height="1" uuid="632017ac-a7b4-4752-b15c-8fd8fd1bad35"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="52" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="53" height="20" uuid="0da51fb8-ea38-4423-8b74-b35c5f45662e"/>
+				<textFieldExpression><![CDATA[$F{contact_us_ContactUs_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="0" width="135" height="20" uuid="b88a187e-8b18-4c93-9f43-c4931ea3e4d3"/>
+				<textFieldExpression><![CDATA[$F{contact_us_phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="0" width="113" height="20" uuid="345fbf0d-41b7-4ad3-8ed9-ad3293f063a4"/>
+				<textFieldExpression><![CDATA[$F{contact_us_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="334" y="0" width="160" height="52" uuid="4adc4483-4599-4e7c-833a-095251d9a021"/>
+				<textFieldExpression><![CDATA[$F{contact_us_Message}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="0" width="160" height="20" uuid="88b30d4d-5289-4efb-aeb9-312b918c211f"/>
+				<textFieldExpression><![CDATA[$F{contact_us_Email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

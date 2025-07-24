@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Candidate_List" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5df42901-b047-45d6-9068-a1a79bbc3ba4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     candidate_signup.`candidate_signup_id` AS candidate_signup_candidate_signup_id,
+     candidate_signup.`First_Name` AS candidate_signup_First_Name,
+     candidate_signup.`Middle_Name` AS candidate_signup_Middle_Name,
+     candidate_signup.`last_Name` AS candidate_signup_last_Name,
+     candidate_signup.`Email_ID` AS candidate_signup_Email_ID,
+     candidate_signup.`Mobile_Number` AS candidate_signup_Mobile_Number,
+     candidate_signup.`gender` AS candidate_signup_gender,
+     candidate_signup.`State` AS candidate_signup_State,
+     candidate_signup.`District` AS candidate_signup_District,
+     candidate_signup.`Address` AS candidate_signup_Address,
+     candidate_signup.`Voter_ID` AS candidate_signup_Voter_ID,
+     candidate_signup.`Adhar_Number` AS candidate_signup_Adhar_Number,
+     candidate_signup.`Password` AS candidate_signup_Password,
+     candidate_signup.`Confirm_Password` AS candidate_signup_Confirm_Password,
+     candidate_signup.`Birth_Date` AS candidate_signup_Birth_Date,
+     candidate_signup.`VoterIDCard` AS candidate_signup_VoterIDCard,
+     candidate_signup.`AdharCard` AS candidate_signup_AdharCard,
+     candidate_signup.`Image` AS candidate_signup_Image
+FROM
+     `candidate_signup` candidate_signup]]>
+	</queryString>
+	<field name="candidate_signup_candidate_signup_id" class="java.lang.Integer"/>
+	<field name="candidate_signup_First_Name" class="java.lang.String"/>
+	<field name="candidate_signup_Middle_Name" class="java.lang.String"/>
+	<field name="candidate_signup_last_Name" class="java.lang.String"/>
+	<field name="candidate_signup_Email_ID" class="java.lang.String"/>
+	<field name="candidate_signup_Mobile_Number" class="java.lang.String"/>
+	<field name="candidate_signup_gender" class="java.lang.String"/>
+	<field name="candidate_signup_State" class="java.lang.String"/>
+	<field name="candidate_signup_District" class="java.lang.String"/>
+	<field name="candidate_signup_Address" class="java.lang.String"/>
+	<field name="candidate_signup_Voter_ID" class="java.lang.String"/>
+	<field name="candidate_signup_Adhar_Number" class="java.lang.String"/>
+	<field name="candidate_signup_Password" class="java.lang.String"/>
+	<field name="candidate_signup_Confirm_Password" class="java.lang.String"/>
+	<field name="candidate_signup_Birth_Date" class="java.lang.String"/>
+	<field name="candidate_signup_VoterIDCard" class="java.lang.String"/>
+	<field name="candidate_signup_AdharCard" class="java.lang.String"/>
+	<field name="candidate_signup_Image" class="java.lang.String"/>
+	<group name="candidate_signup_candidate_signup_id">
+		<groupExpression><![CDATA[$F{candidate_signup_candidate_signup_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="44" height="20" uuid="c7de29cb-7fdd-4f27-87bc-35d8f9d2a40f"/>
+				<text><![CDATA[candidate_signup_candidate_signup_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="0" width="44" height="20" uuid="d0fc7a65-73a9-4461-b9fd-05b82263152a"/>
+				<text><![CDATA[candidate_signup_Password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="0" width="44" height="20" uuid="ed8850de-6b5d-42f1-9d8b-2107b7e45b10"/>
+				<text><![CDATA[candidate_signup_District]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="0" width="44" height="20" uuid="07e6d352-80e0-4599-9c9f-fff715b8c344"/>
+				<text><![CDATA[candidate_signup_AdharCard]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="0" width="44" height="20" uuid="53bbdfa4-31ba-4510-b9d2-bbcc530580ec"/>
+				<text><![CDATA[candidate_signup_VoterIDCard]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="44" height="20" uuid="f84d2c48-fea9-484a-9801-2f5eebf483f3"/>
+				<text><![CDATA[candidate_signup_Confirm_Password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="0" width="44" height="20" uuid="0c4ed959-9921-47e5-9452-4fd7f062ba35"/>
+				<text><![CDATA[candidate_signup_last_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="0" width="44" height="20" uuid="2e309249-c1cf-4119-a744-ff8ddd4db276"/>
+				<text><![CDATA[candidate_signup_State]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="0" width="44" height="20" uuid="7a268e2e-f7d2-4a02-b7c7-2e9ab65b8777"/>
+				<text><![CDATA[candidate_signup_Adhar_Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="0" width="44" height="20" uuid="461eceff-7445-4549-841e-e3988be38f67"/>
+				<text><![CDATA[candidate_signup_gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="44" height="20" uuid="90048b52-7fd6-4a2e-bf66-f95722f925ae"/>
+				<text><![CDATA[candidate_signup_Voter_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="0" width="44" height="20" uuid="76ea546e-52e5-4f04-a3ab-4cee4a71c3d9"/>
+				<text><![CDATA[candidate_signup_Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="528" y="0" width="44" height="20" uuid="bd389fb8-9e64-42e8-905f-2e0b6be5d076"/>
+				<text><![CDATA[candidate_signup_Birth_Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="572" y="0" width="44" height="20" uuid="404b5513-6079-4cb2-abaf-1622c96d1f89"/>
+				<text><![CDATA[candidate_signup_First_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="616" y="0" width="44" height="20" uuid="1cc334ea-1b62-4489-a648-91a011871486"/>
+				<text><![CDATA[candidate_signup_Image]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="660" y="0" width="44" height="20" uuid="cd89de8e-e98e-4520-9e32-4eb3158ef013"/>
+				<text><![CDATA[candidate_signup_Mobile_Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="704" y="0" width="44" height="20" uuid="43fd5fef-6007-4d99-b544-5a43c2d27ca1"/>
+				<text><![CDATA[candidate_signup_Email_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="748" y="0" width="44" height="20" uuid="b1de1f0e-5467-41a0-aca5-c2caa9791b60"/>
+				<text><![CDATA[candidate_signup_Middle_Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="44" height="20" uuid="bf7ac28d-28f4-4139-9522-518dd0fcf7e9"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_candidate_signup_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="44" y="0" width="44" height="20" uuid="0ae1c8e7-5c15-4a69-aff7-8e4fe5992dd1"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_Password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="0" width="44" height="20" uuid="e6f1dfa9-44b3-495a-8eec-5e69947de173"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_District}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="0" width="44" height="20" uuid="d455db06-7e82-4315-afc5-3fae4c36cfb6"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_AdharCard}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="0" width="44" height="20" uuid="68fc9159-921b-4c74-ab5a-30588e25abf1"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_VoterIDCard}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="44" height="20" uuid="def87404-69d5-4324-837b-1c0c21b8b9e3"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_Confirm_Password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="0" width="44" height="20" uuid="876224cd-d651-499d-910b-016c8905e80f"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_last_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="0" width="44" height="20" uuid="03877ff7-0f1e-4b71-8b70-a170cfcb5b10"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_State}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="0" width="44" height="20" uuid="873a2302-3dc8-49ce-9f38-07df746d1016"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_Adhar_Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="0" width="44" height="20" uuid="1f62a4aa-ef0c-43f2-bfd7-2509ea9fe115"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="44" height="20" uuid="65cf77e0-f1b2-4d96-b092-51eb95a5e500"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_Voter_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="0" width="44" height="20" uuid="9046472c-e283-4b65-a192-79fca0033277"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="528" y="0" width="44" height="20" uuid="716803bb-44f6-431a-baf3-06bf975c8555"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_Birth_Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="572" y="0" width="44" height="20" uuid="8ea19546-44d5-44d7-bdca-d3fc556df31b"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_First_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="616" y="0" width="44" height="20" uuid="71ba630a-3007-4a3d-9972-84755174531a"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_Image}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="660" y="0" width="44" height="20" uuid="801c4091-e4f4-472a-9fd7-ee78e7460575"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_Mobile_Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="704" y="0" width="44" height="20" uuid="2890ba40-5294-43df-bd6f-d47c6d3550a3"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_Email_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="748" y="0" width="44" height="20" uuid="4a3f0c78-e525-467e-a41a-4c133c1cdb54"/>
+				<textFieldExpression><![CDATA[$F{candidate_signup_Middle_Name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

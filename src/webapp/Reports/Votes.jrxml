@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Votes" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9d86027-40b9-439a-b726-868494aedad6">
+	<property name="ireport.zoom" value="0.6209213230591552"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     votings.`id` AS votings_id,
+     votings.`election_id` AS votings_election_id,
+     votings.`Adhar_Number` AS votings_Adhar_Number,
+     votings.`candidate_id` AS votings_candidate_id,
+     votings.`position` AS votings_position
+FROM
+     `votings` votings]]>
+	</queryString>
+	<field name="votings_id" class="java.lang.Integer"/>
+	<field name="votings_election_id" class="java.lang.Integer"/>
+	<field name="votings_Adhar_Number" class="java.lang.String"/>
+	<field name="votings_candidate_id" class="java.lang.Integer"/>
+	<field name="votings_position" class="java.lang.String"/>
+	<group name="votings_id">
+		<groupExpression><![CDATA[$F{votings_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="353" y="28" width="100" height="20" uuid="b57d8906-f673-4283-9e5d-216d07a25ba3"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vote Counts]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="36" y="0" width="160" height="20" uuid="44bb2799-e383-4ecf-8f1e-ba7f508c933a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="160" height="20" uuid="a31f137c-0657-4618-9744-44871296518f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Candidate Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="160" height="20" uuid="5489f555-b65b-414a-a4fb-58e6b644da70"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adhar Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="160" height="20" uuid="75d6f1ed-4202-4257-8724-8902378421e7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Election Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="640" y="0" width="160" height="20" uuid="cf8531a7-9d00-4747-92d8-3c565a5a56f8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Position]]></text>
+			</staticText>
+			<line>
+				<reportElement x="24" y="29" width="776" height="1" uuid="b4a11d2f-9553-49cf-9043-2070bc49c95c"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="36" y="0" width="160" height="20" uuid="a5d59bb9-0506-4a58-940f-844d03d03c28"/>
+				<textFieldExpression><![CDATA[$F{votings_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="160" height="20" uuid="6d357d46-8fab-4d59-9820-2af7566c16df"/>
+				<textFieldExpression><![CDATA[$F{votings_candidate_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="160" height="20" uuid="66cc3b75-4154-42a9-be96-044e56883220"/>
+				<textFieldExpression><![CDATA[$F{votings_Adhar_Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="160" height="20" uuid="c14088ea-b848-4c9e-b4f8-e02c024fbffc"/>
+				<textFieldExpression><![CDATA[$F{votings_election_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="640" y="0" width="160" height="20" uuid="f55f9243-0545-43bf-b0fd-97f932a3702f"/>
+				<textFieldExpression><![CDATA[$F{votings_position}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

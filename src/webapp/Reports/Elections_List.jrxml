@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Elections_List" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a5125db8-baf7-4cd0-9ca8-ce33a5d72803">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     addelection.`Election_Id` AS addelection_Election_Id,
+     addelection.`election_name` AS addelection_election_name,
+     addelection.`election_type` AS addelection_election_type,
+     addelection.`election_date` AS addelection_election_date,
+     addelection.`start_time` AS addelection_start_time,
+     addelection.`end_time` AS addelection_end_time,
+     addelection.`result_date` AS addelection_result_date,
+     addelection.`rules` AS addelection_rules,
+     addelection.`status` AS addelection_status
+FROM
+     `addelection` addelection]]>
+	</queryString>
+	<field name="addelection_Election_Id" class="java.lang.Integer"/>
+	<field name="addelection_election_name" class="java.lang.String"/>
+	<field name="addelection_election_type" class="java.lang.String"/>
+	<field name="addelection_election_date" class="java.lang.String"/>
+	<field name="addelection_start_time" class="java.lang.String"/>
+	<field name="addelection_end_time" class="java.lang.String"/>
+	<field name="addelection_result_date" class="java.lang.String"/>
+	<field name="addelection_rules" class="java.lang.String"/>
+	<field name="addelection_status" class="java.lang.String"/>
+	<group name="addelection_Election_Id">
+		<groupExpression><![CDATA[$F{addelection_Election_Id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="349" y="19" width="100" height="20" uuid="15b15c73-5961-4bc3-b8ba-caebbc776bed"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Election List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="29" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="413" y="0" width="36" height="20" uuid="9f1dbfcb-1cbb-4b27-b9fd-f9d56f4acbc8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="0" width="89" height="20" uuid="acfa907c-72cd-47cf-9a06-9918a5aaed28"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Election Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="0" width="44" height="20" uuid="896392a9-6558-437d-a073-24cf6c26c057"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="0" width="79" height="20" uuid="b318ceef-30ff-4d31-b00c-701f8af7415c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Election_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="491" y="0" width="56" height="20" uuid="f71d5f8e-a0d7-47f8-bdeb-99da8c516fee"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Result Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="574" y="0" width="58" height="20" uuid="9861a499-5c32-428f-8623-383e00301112"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[start_time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="731" y="0" width="47" height="20" uuid="93866d57-8c80-4519-a128-d57a84f8a3fe"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rules]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="58" height="20" uuid="6bd09241-34c4-4879-8807-736d761bfd77"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Election Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="658" y="0" width="64" height="20" uuid="b1492a70-d555-4ac7-84e7-4ac401f49676"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[End Time]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="23" width="801" height="1" uuid="3ed1f9db-53ab-413b-bd14-6426f4b7607b"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="13" y="0" width="89" height="20" uuid="32d76914-2d92-432b-bbef-8d2e597cde15"/>
+				<textFieldExpression><![CDATA[$F{addelection_Election_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="413" y="0" width="54" height="20" uuid="4b244c33-8183-433a-ae17-76757cfd89f7"/>
+				<textFieldExpression><![CDATA[$F{addelection_status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="0" width="89" height="20" uuid="1df3c8c4-f078-4ed5-aaea-bbbcf3513f49"/>
+				<textFieldExpression><![CDATA[$F{addelection_election_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="658" y="0" width="54" height="20" uuid="8349ac8f-e3a6-4a3f-a282-1217b6d8dc2b"/>
+				<textFieldExpression><![CDATA[$F{addelection_end_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="312" y="0" width="54" height="20" uuid="15738b6e-db40-4419-bfc2-335ae40073aa"/>
+				<textFieldExpression><![CDATA[$F{addelection_election_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="0" width="89" height="20" uuid="5973726b-0616-4d5a-b857-a717aee678d9"/>
+				<textFieldExpression><![CDATA[$F{addelection_election_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="491" y="0" width="56" height="20" uuid="51b0c2ec-e7e3-4dc4-a714-0d1506247d97"/>
+				<textFieldExpression><![CDATA[$F{addelection_result_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="574" y="0" width="39" height="20" uuid="ef54001e-6b2d-4ba8-aca3-1b4729cb052a"/>
+				<textFieldExpression><![CDATA[$F{addelection_start_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="731" y="0" width="70" height="20" uuid="8e7d89f6-3a5f-4b76-b04d-f8b7f1d12cba"/>
+				<textFieldExpression><![CDATA[$F{addelection_rules}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

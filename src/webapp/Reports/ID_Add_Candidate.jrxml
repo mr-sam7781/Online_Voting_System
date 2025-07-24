@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ID_Add_Candidate" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="55f1d1ba-fd5c-411a-bc15-e1cb5e2709d7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     admin_add_candidate.`candidate_id` AS admin_add_candidate_candidate_id,
+     admin_add_candidate.`Select_election` AS admin_add_candidate_Select_election,
+     admin_add_candidate.`candidateName` AS admin_add_candidate_candidateName,
+     admin_add_candidate.`PartyName` AS admin_add_candidate_PartyName,
+     admin_add_candidate.`VoterId` AS admin_add_candidate_VoterId,
+     admin_add_candidate.`candidateId` AS admin_add_candidate_candidateId,
+     admin_add_candidate.`AdharNumber` AS admin_add_candidate_AdharNumber,
+     admin_add_candidate.`email` AS admin_add_candidate_email,
+     admin_add_candidate.`ContactNumber` AS admin_add_candidate_ContactNumber,
+     admin_add_candidate.`Qualification` AS admin_add_candidate_Qualification,
+     admin_add_candidate.`candidate_position` AS admin_add_candidate_candidate_position,
+     admin_add_candidate.`candidateDOB` AS admin_add_candidate_candidateDOB,
+     admin_add_candidate.`Address` AS admin_add_candidate_Address,
+     admin_add_candidate.`candidatephoto` AS admin_add_candidate_candidatephoto,
+     admin_add_candidate.`candidateadharcard` AS admin_add_candidate_candidateadharcard,
+     admin_add_candidate.`candidatevoterid` AS admin_add_candidate_candidatevoterid,
+     admin_add_candidate.`partylogo` AS admin_add_candidate_partylogo,
+     admin_add_candidate.`votes` AS admin_add_candidate_votes
+FROM
+     `admin_add_candidate` admin_add_candidate
+WHERE candidate_id = $P{id}]]>
+	</queryString>
+	<field name="admin_add_candidate_candidate_id" class="java.lang.Integer"/>
+	<field name="admin_add_candidate_Select_election" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidateName" class="java.lang.String"/>
+	<field name="admin_add_candidate_PartyName" class="java.lang.String"/>
+	<field name="admin_add_candidate_VoterId" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidateId" class="java.lang.String"/>
+	<field name="admin_add_candidate_AdharNumber" class="java.lang.String"/>
+	<field name="admin_add_candidate_email" class="java.lang.String"/>
+	<field name="admin_add_candidate_ContactNumber" class="java.lang.String"/>
+	<field name="admin_add_candidate_Qualification" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidate_position" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidateDOB" class="java.lang.String"/>
+	<field name="admin_add_candidate_Address" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidatephoto" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidateadharcard" class="java.lang.String"/>
+	<field name="admin_add_candidate_candidatevoterid" class="java.lang.String"/>
+	<field name="admin_add_candidate_partylogo" class="java.lang.String"/>
+	<field name="admin_add_candidate_votes" class="java.lang.Integer"/>
+	<group name="admin_add_candidate_candidate_id">
+		<groupExpression><![CDATA[$F{admin_add_candidate_candidate_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="44" height="20" uuid="a496092e-7062-49d2-8150-467dd64a9be2"/>
+				<text><![CDATA[admin_add_candidate_candidate_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="0" width="44" height="20" uuid="e78095ce-9965-4532-8c85-69f5aa7e0cbd"/>
+				<text><![CDATA[admin_add_candidate_candidateDOB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="0" width="44" height="20" uuid="e5d54c8c-824d-4985-a1f7-e46c0ec7175c"/>
+				<text><![CDATA[admin_add_candidate_VoterId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="0" width="44" height="20" uuid="57fde41e-5160-4678-9a1b-9029b4829904"/>
+				<text><![CDATA[admin_add_candidate_AdharNumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="0" width="44" height="20" uuid="61168d3f-285f-49fb-a917-f4df61606645"/>
+				<text><![CDATA[admin_add_candidate_email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="44" height="20" uuid="9e4d766c-3e06-4d07-9ce3-3ed40b5a81a0"/>
+				<text><![CDATA[admin_add_candidate_partylogo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="0" width="44" height="20" uuid="c3659870-0f5b-4895-aa55-3667f1d00b6b"/>
+				<text><![CDATA[admin_add_candidate_candidatephoto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="0" width="44" height="20" uuid="f2b093d5-dd9e-4325-b229-4572d366424f"/>
+				<text><![CDATA[admin_add_candidate_Select_election]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="0" width="44" height="20" uuid="28a453b8-e9eb-470d-acad-55b8c3d39de8"/>
+				<text><![CDATA[admin_add_candidate_Qualification]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="0" width="44" height="20" uuid="fc60391a-556a-492d-9e8d-cae3802bbced"/>
+				<text><![CDATA[admin_add_candidate_Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="44" height="20" uuid="c328b0bf-b277-478f-b9ae-773cdb3d4c3f"/>
+				<text><![CDATA[admin_add_candidate_candidatevoterid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="0" width="44" height="20" uuid="7952ce25-eeec-4bd7-8cb9-1b01491ca31e"/>
+				<text><![CDATA[admin_add_candidate_votes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="528" y="0" width="44" height="20" uuid="a917fe78-fd5f-4fa8-bf0e-eb5dfb50a596"/>
+				<text><![CDATA[admin_add_candidate_candidateadharcard]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="572" y="0" width="44" height="20" uuid="739efebe-62f8-4271-a5e1-982f4ffefad8"/>
+				<text><![CDATA[admin_add_candidate_ContactNumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="616" y="0" width="44" height="20" uuid="4958506b-a2bf-4536-af8d-142fd3513bf8"/>
+				<text><![CDATA[admin_add_candidate_PartyName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="660" y="0" width="44" height="20" uuid="dbfdce7e-4da6-4e9f-99d7-f737d8ee4425"/>
+				<text><![CDATA[admin_add_candidate_candidateName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="704" y="0" width="44" height="20" uuid="662f0618-4ed9-4e06-9f55-44f7d886d9dd"/>
+				<text><![CDATA[admin_add_candidate_candidateId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="748" y="0" width="44" height="20" uuid="dd1dc50d-04bb-4379-b7f7-3793d5329c77"/>
+				<text><![CDATA[admin_add_candidate_candidate_position]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="44" height="20" uuid="987d5d42-7d77-470d-9318-b3fa5d0b39ad"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidate_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="44" y="0" width="44" height="20" uuid="8fb7a6aa-6083-4be5-89eb-ce69aa9441f3"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidateDOB}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="0" width="44" height="20" uuid="2318e352-2929-4c4c-bab4-b29a92b96168"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_VoterId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="0" width="44" height="20" uuid="ac972938-ebef-4a10-9d11-005e9b8eb806"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_AdharNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="0" width="44" height="20" uuid="bff74475-f796-493f-9b67-27c70a8a22d8"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="44" height="20" uuid="1b236545-d269-464e-b934-5ee63a418f92"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_partylogo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="0" width="44" height="20" uuid="7c8d1826-eecf-49a0-8dfd-bf4bcdefc095"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidatephoto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="0" width="44" height="20" uuid="26f95bdb-d7a4-44bc-a927-b1d3a7c6dd1b"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_Select_election}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="0" width="44" height="20" uuid="293ad4c4-c948-4d75-9030-dab4354f7c79"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_Qualification}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="0" width="44" height="20" uuid="4dcc15d7-7952-4acd-bc9d-6097a2a93873"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="44" height="20" uuid="59711619-1f33-42cb-9d7e-7ef45b493f78"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidatevoterid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="0" width="44" height="20" uuid="2e51e131-e6fc-433f-a86f-dbf490c835e8"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_votes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="528" y="0" width="44" height="20" uuid="81339e97-beaa-411d-9813-164564348197"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidateadharcard}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="572" y="0" width="44" height="20" uuid="e8675239-0d87-4222-89e4-b160f7c8f061"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_ContactNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="616" y="0" width="44" height="20" uuid="88cdbd55-df5c-4f91-ae89-4da4dc0f8c22"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_PartyName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="660" y="0" width="44" height="20" uuid="4edb3ecd-cea5-4be4-b849-46fe98164c30"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidateName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="704" y="0" width="44" height="20" uuid="bc0e0df1-173e-493a-a5e3-8dd02401cfb1"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidateId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="748" y="0" width="44" height="20" uuid="f692bfd4-e705-41e2-a46f-adb0989a76b6"/>
+				<textFieldExpression><![CDATA[$F{admin_add_candidate_candidate_position}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
