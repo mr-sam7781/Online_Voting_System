@@ -1,0 +1,122 @@
+@charset "ISO-8859-1";
+body
+{
+	font-family: Arial, sans-serif;
+
+ }
+ .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 128);
+  padding: 10px 20px;
+  height: 70px;
+  box-shadow: 0 0 50px #f5f5f5;
+  
+  
+}
+
+.navbar > li {
+    position: relative;
+    font-weight: bold;
+}
+
+.navbar li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.navbar li:hover {
+    background: #002e63;
+}
+.drodown {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #002e63;
+    display: none;
+    min-width: 180px;
+    padding: 0;
+    z-index: 1000;
+}
+
+.drodown li {
+    width: 100%;
+}
+
+.drodown li a {
+    padding: 12px 15px;
+    color: white;
+    display: block;
+    white-space: nowrap;
+}
+
+.drodown li a:hover {
+    background: rgb(0, 67, 140);
+}
+
+.navbar li:hover .drodown {
+    display: block;
+}
+ p{
+	
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 25px;
+
+}
+.leaver{
+	margin-left: 20px;
+}
+
+.box{
+	margin-left: 250px;
+}
+.button1
+{
+	height:40px;
+	width: 170px;
+	color: rgb(0, 0, 0); 
+	font-size: 14px;
+	font-weight: 600;
+	margin: 20px 0 30px 80px;
+	border: none;
+	background-color: rgb(192, 192, 192);
+	box-shadow: 0px 0px 15px rgb(255, 255, 255);	
+}
+
+.button4
+{
+	height:40px;
+	width: 170px;	
+	color: black; 
+	font-size: 14px;
+	font-weight: 600;
+	margin: 20px 0 30px 80px;
+	border: none;
+	background-color: rgb(192, 192, 192);
+	box-shadow: 0px 0px 15px rgb(255, 255, 255);	
+	
+}
+
+.label_id
+{
+	color: black;
+	font-size: 15px;
+	padding: 20px 0 0 80px;
+	margin-left: 250px;
+}
+.textbox
+{
+	height: 40px;
+	width: 300px;
+	background-color: white;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.2);	
+	border: none;
+	outline: none;
+	border-bottom: 1px solid black;
+	margin: 10px 0 0 20px;
+}

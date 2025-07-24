@@ -1,0 +1,84 @@
+@charset "ISO-8859-1";
+  body
+  		{
+           background-image: url('images/vbg.png');
+		    background-size: cover; 
+		    background-repeat: no-repeat; 
+   
+        }
+
+ .signup-div {
+    width:300px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+  	position: absolute;
+    top: 60%;
+    bottom: 4 0%;
+ 	left:10%;
+    transform: translate(0, -60%);
+}
+
+ .signup-div h1
+         {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(0, 0, 0);
+        }
+
+.signup-div label
+{
+	color:black;
+}
+.signup-div input ::placeholder
+{
+	color: rgb(255, 255, 255);
+	border: black;
+}
+i{
+	margin-left: -30px;
+}
+::placeholder
+{
+	text-indent: 5pt;
+}
+
+.textbox
+{
+	height: 30px;
+	width: 85%;
+	margin:20px 0 0 0 ;
+	color: rgb(0, 0, 0);
+	border-radius: 10px;
+}
+.textboxe{
+	height: 30px;
+	width: 85%;
+	margin:20px 0 0 0 ;
+	color: rgb(0, 0, 0);
+	border-radius: 10px;
+}
+ p{
+	font-weight: bold;
+	color: black;
+}
+a{
+	color: rgb(0, 0, 160);
+}
+.button
+{
+	height: 35px; 
+	width: 85%;
+	margin: 20px 0 0 0 ;
+	border: none;
+    background: linear-gradient(to right, rgb(0, 0, 160), rgb(0, 0, 255), rgb(0,0,160)); 
+	color: white;
+	border-radius: 20px;
+	cursor: pointer;
+}
+button:hover
+{
+	background-color: blue;
+}
+

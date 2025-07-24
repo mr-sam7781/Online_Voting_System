@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+body {
+	background-image: url('images/vbg.png');
+	background-size: cover;
+	 font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.login_div 
+{
+	width:400px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 50px;
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+  	position: absolute;
+    top: 60%;
+    left: 10%;
+    bottom: 4 0%;
+    transform: translate(0, -60%);
+  
+}

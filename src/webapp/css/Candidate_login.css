@@ -1,0 +1,91 @@
+@charset "ISO-8859-1";
+
+
+body
+{
+	background-image: url('images/vbg.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+.login_div 
+{
+	width:400px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+  	position: absolute;
+    top: 60%;
+    bottom: 4 0%;
+ 	left:10% ;
+    transform: translate(0, -60%);
+  
+}
+.login_div h2
+{
+
+	color:rgb(255, 255, 255);
+	font-family: 'Times New Roman', Times, serif;
+}
+.login_div i{
+	margin-left:-30px;
+	font-size: 16px;;
+	padding-top: 5px;
+	
+}
+       
+.login_div label
+{
+	color:black;
+}
+.login_div input ::placeholder
+{
+	color: rgb(255, 255, 255);
+}
+
+.textbox
+{
+	height: 35px;
+	width: 80%;
+	margin:20px 0 0 0 ;
+	color: rgb(0, 0, 0);
+	border-radius: 10px;
+	
+}
+.forgot
+{
+	
+	 text-align: right;
+	 display: block;
+	 margin-top: 10px;
+	 font-size: 14px;
+	 color: rgb(0, 0, 128);
+	 text-decoration: none;
+	
+}
+.register
+{
+	color: black;
+	text-decoration: underline;
+}
+
+.button
+{
+	height: 35px; 
+	width: 80%;
+	margin: 20px 0 0 0 ;
+	border: none;
+    background: linear-gradient(to right, rgb(0, 0, 64), rgb(0,0,150), rgb(0, 0, 255)); 
+	color: white;
+	border-radius: 20px;
+
+	
+}
+.button-hover
+{
+	background-color: blue;
+}
+
+
+ 
+
